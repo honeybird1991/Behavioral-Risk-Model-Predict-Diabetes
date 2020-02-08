@@ -1,0 +1,138 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+
+    <title>Diabetes Risk Testing</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      div.container {
+        font-size: 20px;
+      }
+      
+      div.form-group {
+        font-size: 20px;
+      }
+
+      </style>
+  </head>
+
+<body>
+
+<br><br>
+
+    <div class="container">
+
+      <div class="starter-template">
+          <h2>Diabetes Risk Test and Prevention</h2>
+          <img src="/static/images/Risk_of_Diabetes.jpg" alt="diabetes risk",width="500" height="300">
+          <p>To better measure your risk, please answer the following questions:</p>
+      </div>
+
+      <div class = "container">
+        <form  action="/predict" method="GET">
+          <div class="form-group">
+              <label for="RIDAGEYR">Input your age</label>
+              <input type="text" id="RIDAGEYR" name='RIDAGEYR' value=45>
+          </div>
+          <div class="form-group">
+            <label for="RIAGENDR">Specify your gender</label>
+            <select id="RIAGENDR" name="RIAGENDR">
+              <option value=1>Male</option>
+              <option value=2>Female</option>
+          </select>
+          </div>
+          <div class="form-group">
+            <label for="BMXHT">Your height (cm)</label>
+            <input type="text" id="BMXHT" name='BMXHT' value=170>
+          </div>
+          <div class="form-group">
+            <label for="BMXWT">Your weight (kg)</label>
+            <input type="text" id="BMXWT" name='BMXWT' value=80>
+          </div>
+          <div class="form-group">
+            <label for="DBQ197">How often do you drink milk</label>
+            <select id="DBQ197" name="DBQ197">
+              <option value=0>Never</option>
+              <option value=1>Rarely-less than once a week</option>
+              <option value=2>Sometimes-once a week or more, but less than once a day</option>
+              <option value=3>Often-once a day or more</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="BPQ020">Do you have high blood pressure (SYSTOLIC > 130 mm Hg or DIASTOLIC > 80 mm Hg)</label>
+            <select id="BPQ020" name="BPQ020">
+              <option value=1>Yes</option>
+              <option value=2>No</option>
+              <option value=9>Don't know</option>
+          </select>
+          </div>
+          <div class="form-group">
+            <label for="ALQ120Q">How often do you drink alcohol</label>
+            <select id="ALQ120Q" name="ALQ120Q">
+              <option value=25>Less than once a week</option>
+              <option value=50>Once a week</option>
+              <option value=100>Twice a week</option>
+              <option value=150>Three times a week</option>
+              <option value=200>More than three times a week</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="DR1TKCAL">Calorie intake every day (kcal)</label>
+            <select id="DR1TKCAL" name="DR1TKCAL">
+              <option value=250>0-500</option>
+              <option value=750>500-1000</option>
+              <option value=1500>1000-2000</option>
+              <option value=2200>>2000</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="SLD010H">How much sleep do you get (hours)?</label>
+            <input type="text" id="SLD010H" name='SLD010H' value=8>
+          </div>
+          <div class="form-group">
+            <label for="DPQ040">How often do you feel tired or have little energy</label>
+            <select id="DPQ040" name="DPQ040">
+              <option value=0>Not at all</option>
+              <option value=1>Several days</option>
+              <option value=2>More than half the days</option>
+              <option value=3>Nearly every day</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="PAQ665">How much moderate recreational activity every week</label>
+            <select id="PAQ665" name="PAQ665">
+              <option value=1>More than 1 hour</option>
+              <option value=2>Less than 1 hour</option>
+            </select>
+          </div>
+          <div class="starter-template">
+            <div>
+              <button type="submit" class="btn btn-primary">submit</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="static/js/bootstrap.min.js"></script>
+
+    </div> <!-- /.container-->
+
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="static/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,123 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+
+    <title>Diabetes Risk Testing</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      div.container {
+        font-size: 20px;
+      }
+      p.lead {
+        font-size: 50px;
+      }  
+      p.message {
+        font-size: 30px;
+      }
+      p.milk {
+        font-style: italic;
+      }
+      div.form-group {
+        font-size: 20px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+<br><br>
+
+      <div class="container">
+        <div class="starter-template">
+          <p class="lead">The risk is <b>{{the_result}}</b>.</p>
+          <p class="message"><b>{{message}}</b></p>
+        </div>
+        
+        <div class="form-group">
+          <p>Below is the risk trend analysis, select one feature to see how it goes.</p>
+          <select id = "RiskAnalysis" onChange="showImage()">
+            <option value=>Select a feature</option>
+            <option value="/plot_weight.png">Weight</option>
+            <option value="/plot_sleep.png">Sleep hours</option>
+            <option value="/plot_milk.png">Milk consumption</option>
+            <option value="/plot_blood.png">Blood pressure</option>
+
+          </select>
+        </div>
+        <div >
+          <img id="ImageToShow" src="/static/images/toc_image.jpg",width="600" height="600"/>
+        </div>
+        <br>
+        <h3>To reduce your risk, checkout the suggestion list.</h3>
+      </div>
+
+      <div class = "container">
+        <form  action="{{ url_for('predict_next') }}" method="POST">
+          <h4>Weight:</h4>
+          <div class="form-group">
+            <label for="BMXWT_A">I plan to gradually lose my weight by</label> 
+            <select id="BMXWT_A" name="BMXWT_A">
+              <option value=0.98>2%</option>
+              <option value=0.95>5%</option>
+              <option value=0.9>10%</option>
+              <option value=0.85>15%</option>
+            </select>
+            <p>OR</p>
+          </div>
+          <div class="form-group">
+            <label for="BMXWT_B">I plan to set my target weight as (kg)</label>
+            <input type="text" id="BMXWT_B" name='BMXWT_B' value=0>
+          </div>
+          <h4>Sleep:</h4>
+          <div class="form-group">
+            <label for="SLD010H">I plan to sleep more hours</label>
+            <select id="SLD010H" name="SLD010H">
+              <option value=1>1 hour more</option>
+              <option value=2>2 hours more</option>
+              <option value=3>3 hours more</option>
+            </select>
+          </div>
+          <h4>Milk:</h4>
+          <div class="form-group">
+            <label for="DBQ197">I plan to drink more milk</label>
+            <select id="DBQ197" name="DBQ197">
+              <option value=1>Less than once a week</option>
+              <option value=2>Once a week or more, but less than once a day</option>
+              <option value=3>Once a day or more</option>
+            </select>
+          </div>
+          <p class="milk">Wonder why milk may help reduce the risk of diabetes? Check it out here. </p>
+          <p ><a href="http://ijns.sums.ac.ir/article_43451.html" target="_blank">"The role of camel milk in treatment of type 2 diabetes: a review."(2018)</a></p>
+          <div class="starter-template">
+            <div>
+              <button type="submit" class="btn btn-primary",value="submit">submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+      </div><!-- /.container -->
+
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/js/Risk_of_Diabetes.js"></script>
+  </body>
+</html>
+
+
+

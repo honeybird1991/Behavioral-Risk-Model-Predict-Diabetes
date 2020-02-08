@@ -1,0 +1,101 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+<br><br>
+
+      <div class="container">
+        <div class="starter-template">
+          <h3>Results:</h3>
+          <p class="lead">Below is the result of your diabetes risk and advices.<br>The result is {{the_result}}</p>
+        </div>
+        <img src="/plot.png" alt="my plot">
+        <div class="starter-template">
+          <h3>Take test already? go diagnosis below</h3>
+        </div>
+        <div class = "container">
+          <form  action="/diagnosis" method="GET">
+            <div class="form-group">
+                <label for="LBXTC">1. Total Cholesterol (mg/dL)</label>
+                <input type="text" id="LBXTC" name='LBXTC' placeholder="e.g. 0-800">
+            </div>
+            <div class="form-group">
+              <label for="LBDLDL">2. LDL-cholesterol (mg/dL)</label>
+              <input type="text" id="LBDLDL" name='LBDLDL' placeholder="e.g. 0-500">
+            </div>
+            <div class="form-group">
+              <label for="LBDHDD">3. Direct HDL-Cholesterol (mg/dL)</label>
+              <input type="text" id="LBDHDD" name='LBDHDD' placeholder="e.g. 0-200">
+            </div>    
+            <div class="form-group">
+              <label for="LBXSOSSI">4. Osmolality (mmol/Kg)</label>
+              <input type="text" id="LBXSOSSI" name='LBXSOSSI' placeholder="e.g. 200-350">
+            </div>
+            <div class="form-group">
+              <label for="LBXSNASI">5. Sodium (mmol/L)</label>
+              <input type="text" id="LBXSNASI" name='LBXSNASI' placeholder="e.g. 100-160">
+            </div>
+            <div class="form-group">
+              <label for="LBDSBUSI">6. Blood urea nitrogen (mmol/L)</label>
+              <input type="text" id="LBDSBUSI" name='LBDSBUSI' placeholder="e.g. 0-35">
+            </div>
+            <div class="form-group">
+              <label for="LBDTRSI">7. Triglyceride (mmol/L)</label>
+              <input type="text" id="LBDTRSI" name='LBDTRSI' placeholder="e.g. 0-50">
+            </div>
+            <div class="form-group">
+              <label for="LBXSGTSI">8. Gamma glutamyl transferase (U/L)</label>
+              <input type="text" id="LBXSGTSI" name='LBXSGTSI' placeholder="e.g. 0-1500">
+            </div>
+            <div class="form-group">
+              <label for="LBDLYMNO">9. Lymphocyte number (1000 cells/uL)</label>
+              <input type="text" id="LBDLYMNO" name='LBDLYMNO' placeholder="e.g. 0-50">
+            </div>
+            <div class="form-group">
+              <label for="LBXWBCSI">10. White blood cell count (1000 cells/uL)</label>
+              <input type="text" id="LBXWBCSI" name='LBXWBCSI' placeholder="e.g. 0-50">
+            </div>    
+            <div class="starter-template">
+              <h4>Click the button below to perform diagnosis test.</h4>
+              <div>
+                <button type="submit" class="btn btn-default btn-lg">submit here</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+
+
+      </div><!-- /.container -->
+
+
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="static/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
