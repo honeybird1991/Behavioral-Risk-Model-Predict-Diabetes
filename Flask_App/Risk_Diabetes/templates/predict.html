@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
 
-    <title>Diabetes Risk Testing</title>
+    <title>Diabetes-Forecaster</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
@@ -33,15 +33,11 @@
   </head>
 
   <body>
-
-<br><br>
-
       <div class="container">
         <div class="starter-template">
           <p class="lead">The risk is <b>{{the_result}}</b>.</p>
           <p class="message"><b>{{message}}</b></p>
         </div>
-        
         <div class="form-group">
           <p>Below is the risk trend analysis, select one feature to see how it goes.</p>
           <select id = "RiskAnalysis" onChange="showImage()">
@@ -50,7 +46,6 @@
             <option value="/plot_sleep.png">Sleep hours</option>
             <option value="/plot_milk.png">Milk consumption</option>
             <option value="/plot_blood.png">Blood pressure</option>
-
           </select>
         </div>
         <div >
@@ -59,7 +54,6 @@
         <br>
         <h3>To reduce your risk, checkout the suggestion list.</h3>
       </div>
-
       <div class = "container">
         <form  action="{{ url_for('predict_next') }}" method="POST">
           <h4>Weight:</h4>
@@ -99,23 +93,21 @@
           <p ><a href="http://ijns.sums.ac.ir/article_43451.html" target="_blank">"The role of camel milk in treatment of type 2 diabetes: a review."(2018)</a></p>
           <div class="starter-template">
             <div>
-              <button type="submit" class="btn btn-primary",value="submit">submit</button>
+              <button type="submit" class="btn btn-primary",id="submit_new",value="submit">submit</button>
             </div>
-          </div>
         </form>
       </div>
-
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="static/js/bootstrap.min.js"></script>
-      </div><!-- /.container -->
+    </div><!-- /.container -->
 
       <!-- Bootstrap core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script src="static/js/bootstrap.min.js"></script>
-  <script src="static/js/Risk_of_Diabetes.js"></script>
+      <script src="static/js/bootstrap.min.js"></script>
+      <script src="static/js/Risk_of_Diabetes.js"></script>
+      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="static/js/bootstrap.min.js"></script>
   </body>
 </html>
 

@@ -235,7 +235,6 @@ def predict_next():
     data[j] = data[j]*float(tmp_a)
   else:
     data[j] = float(tmp_b)
-  print(data[j])
   tmp = request.form["SLD010H"]
   j = demo_features.index('SLD010H')
   data[j] = data[j]+float(tmp)
