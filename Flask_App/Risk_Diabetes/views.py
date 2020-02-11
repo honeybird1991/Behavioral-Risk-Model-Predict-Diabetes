@@ -45,7 +45,7 @@ def predict_batch(data,name):
   if name == 'DR1TKCAL':
     w = [250,750,1500,2200]
   if name == 'SLD010H':
-    w = [i for i in np.linspace(0,12,num = 5)]
+    w = [i for i in np.linspace(3,9,num = 6)]
   if name == 'DPQ040':
     w = [0,1,2,3]
   if name == 'PAQ665':
